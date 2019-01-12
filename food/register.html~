@@ -1,0 +1,126 @@
+<html>
+<title>Register</title>
+<style>
+	header {
+		background: #4578AA;
+		width: 100%;
+	}
+
+	body { 
+		background-image: url("pizza.jpg");
+		/* Full height */
+  		height: 100%; 
+  		/* Center and scale the image nicely */
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	 	 
+	     }
+     	/* center all items within body, this property is inherited */
+	body > * { text-align: left; }
+     	/* left-align the CONTENTS all items within body, additionally
+        you can add this text-align: left property to all elements
+        manually */
+	form { display: inline-block; }
+    	/* reduces the width of the form to only what is necessary */
+
+	#form { 	
+	  padding: 25px;
+	  background: url("white.png");
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  background-size: 500px 100%;
+	  opacity:0.7;
+	  text-align: center;
+	}
+
+	/*#name {
+	 background: url("white.png");
+	 opacity:0.5;
+	 text-align: center;
+	}
+	
+	#age {
+	 background: url("white.png");
+	 opacity:0.5;
+	 text-align: center;
+	}
+	
+	#address {
+	 background: url("white.png");
+	 opacity:0.5;
+	 text-align: center;efgd
+	}
+	
+	#pswd {
+	 background: url("white.png");
+	 opacity:0.5;
+	 text-align: center;
+	}
+	
+	#cpswd {
+	 background: url("white.png");
+	 opacity:0.5;
+	 text-align: center;
+	}*/
+	
+	
+</style>
+
+<body>
+
+<header>
+
+	<nav>
+		<div>
+		<ul>
+		    <li>
+			<input type="text" name="email" placeholder="Email">
+		    </li>
+		    <li>
+			<input type="password" name="password" placeholder="Password">		
+		    </li>
+		</ul>
+		</div>
+	</nav>	
+
+</header>
+
+
+	<div id="form">
+	<form>
+		<div id="name">
+		<b><strong>Please enter your name :</strong></b> 
+		</div> 
+		<p>		
+		<input type="text" name="name">
+		<p>
+		<div id="age">
+		<b>Please enter your age :</b> 
+		</div>
+		<p>		
+		<input type="number" name="age">
+		<p>
+		<div id="address">
+		<b>Please enter your address :</b>
+		</div> 
+		<p>		
+		<textarea rows="2" cols="50" name="comment"></textarea>
+		<p>
+		<div id="pswd">
+		<b>Enter password :</b> 
+		</div>
+		<p>
+		<input type="password" name="password">
+		<p>
+		<div id="cpswd">
+		<b>Confirm password :</b>
+		</div> 
+		<p>
+		<input type="password" name="confirm_password">
+		<p>
+		<input type="button" value="submit"  onclick="response(this.form)">	
+	</form>
+	</div>
+</body>
+</html>

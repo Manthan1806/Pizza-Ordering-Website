@@ -1,0 +1,173 @@
+<html>
+
+<head>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css'>
+  	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css'>
+  	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+</head>
+
+<title>Register</title>
+<style>
+	.top{
+		  margin-top: 10px
+	}
+
+	.left{
+  		   float:left;
+	}
+
+	.clear{
+  		   clear:both;
+	}
+
+	.div-button
+	{
+	    margin-left: 30px;
+	}
+
+	.div-top
+	{
+		margin-top: 20px;
+		margin-right: 20px; 
+	}
+
+	.button {
+			  background-color: #4CAF50; /* Green */
+			  border: none;
+			  color: white;
+			  padding: 5px 20px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 15px;
+			  margin-top: 15px;
+			  margin-right: 20px;
+	}
+
+	header {
+		background: #7523AA;
+		width: 100%;
+	}
+
+	header > * { text-align: right; }
+
+	body { 
+		background-image: url("pizza.jpg");
+		/* Full height */
+  		height: 100%; 
+  		/* Center and scale the image nicely */
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	 	 
+	     }
+     	/* center all items within body, this property is inherited */
+	body > * { text-align: left; }
+     	/* left-align the CONTENTS all items within body, additionally
+        you can add this text-align: left property to all elements
+        manually */
+	form { display: inline-block; }
+    	/* reduces the width of the form to only what is necessary */
+
+    .full-bg-img {
+          color: #fff;
+     }
+
+	#form { 	
+	  padding: 25px;
+	  background: url("white.png");
+	  background-repeat: no-repeat;
+	  background-position: right;
+	  background-size: 500px 100%;
+	  opacity:0.9;
+	  text-align: right;
+	  margin-right: 20px;
+	}
+
+	/*#name {
+	 background: url("white.png");
+	 opacity:0.5;
+	 text-align: center;
+	}
+	
+	#age {
+	 background: url("white.png");
+	 opacity:0.5;
+	 text-align: center;
+	}
+	
+	#address {
+	 background: url("white.png");
+	 opacity:0.5;
+	 text-align: center;efgd
+	}
+	
+	#pswd {
+	 background: url("white.png");
+	 opacity:0.5;
+	 text-align: center;
+	}
+	
+	#cpswd {
+	 background: url("white.png");
+	 opacity:0.5;
+	 text-align: center;
+	}*/
+	
+	
+</style>
+
+<body>
+
+
+<div class="full-bg-img pattern-6">
+<header>
+
+	<nav>
+		<div>
+		<ul>
+		    <form>
+		    	<div class="left top">
+					<input type="text" name="email" placeholder="Email">
+		    	</div>
+		    	<div class="left div-button top">
+					<input type="password" name="password" placeholder="Password">		
+				</div>
+				<div class="left div-button">
+					<button class="button">Login</button>
+				</div>
+		    </form>
+		</ul>
+		</div>
+	</nav>	
+
+</header>
+
+	<div id="form">
+	<form>
+		<div class="left div-button div-top">		
+		<input type="text" name="name" placeholder="Name">
+		</div>
+		<div class="left div-button div-top">
+		<input type="number" name="age" placeholder="Age">
+		</div>
+		<p></p>
+		<div class="left div-button div-top">		
+		<textarea rows="2" cols="50" name="comment" placeholder="Address"></textarea>
+		</div>
+		<p></p>
+		<div class="left div-button div-top">
+		<input type="password" name="password" placeholder="Password">
+		</div>
+		<div class="left div-button div-top"> 
+		<input type="password" name="confirm_password" placeholder="Confirm Password">
+		</div>
+		<p></p>
+		<div class="left div-button div-top">
+			<button class="button">SignUp</button>
+		</div>
+	</form>
+	</div>
+</div>
+</body>
+</html>

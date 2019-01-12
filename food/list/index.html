@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Food Item Listing</title>
+  
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="container">
+      <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="clearfix foodbox center-block">
+                        <div class="pricesection">
+                              <div class="responsive fifty">
+                                    <span class="h3">
+                                          Rs. 300
+                                    </span>
+                              </div>
+                              <div class="responsive fifty">
+                                    <span class="vegNonvegIcon pull-right">
+                                          <img src="images/nv.png" class="img-responsive" alt="Image" width="24">
+                                    </span>
+                              </div>
+                        </div>
+                        <div class="availOption">
+                              <span class="itsAvaliable">
+                                    Avaliable
+                              </span>
+                        </div>
+                        <div class="thumbnail">
+                              <img src="images/1.jpg" alt="">
+                              <div class="caption">
+                                    <div class="contentInline clearfix">
+                                          <div class="responsive contentPart">
+                                                <div class="clearfix">
+                                                      <h3 class="pull-left">Chicken Supreme</h3>
+                                                </div>
+                                                <p class="foodDesc">
+                                                      <a href="javascript:void(0)" onclick="showMoreDesc('moreDesc1')">Description</a>
+                                                </p>
+                                          </div>
+                                          <div class="responsive cartPart">
+                                                <div class="clearfix pull-right">
+                                                      <a href="#" class="btn btn-sm btn-primary onlyaddButton">+ Add</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="foodMoreDesc" id="moreDesc1">
+                              <a href="javascript:void(0)" onclick="showMoreDesc('moreDesc1')">
+                                    <span class="closeDesc">
+                                          <i class="fa fa-times"></i>
+                                    </span>
+                              </a>
+                              <p>
+                              Barbeque chicken, Chicken Salami, Onions, Red Pepper
+                              </p>
+                        </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="clearfix foodbox center-block">
+                        <div class="pricesection">
+                              <div class="responsive fifty">
+                                    <span class="h3">
+                                          Rs. 300
+                                    </span>
+                              </div>
+                              <div class="responsive fifty">
+                                    <span class="vegNonvegIcon pull-right">
+                                          <img src="images/nv.png" class="img-responsive" alt="Image" width="24">
+                                    </span>
+                              </div>
+                        </div>
+                        <div class="availOption">
+                              <span class="itsSoldOut">
+                                    Sold Out
+                              </span>
+                        </div>
+                        <div class="thumbnail">
+                              <img src="images/2.jpg" alt="">
+                              <div class="caption">
+                                    <div class="contentInline clearfix">
+                                          <div class="responsive contentPart">
+                                                <div class="clearfix">
+                                                      <h3 class="pull-left">Pepperoni</h3>
+                                                </div>
+                                                <p class="foodDesc">
+                                                      <a href="javascript:void(0)" onclick="showMoreDesc('moreDesc2')">Description</a>
+                                                </p>
+                                          </div>
+                                          <div class="responsive cartPart">
+                                                <div class="clearfix pull-right">
+                                                      <a href="#" class="btn btn-sm btn-primary addRemoveButton addButton">+</a>
+                                                      <span>
+                                                            &nbsp;5&nbsp;
+                                                      </span>
+                                                      <a href="#" class="btn btn-sm btn-default addRemoveButton removeButton">-</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="foodMoreDesc" id="moreDesc2">
+                              <a href="javascript:void(0)" onclick="showMoreDesc('moreDesc2')">
+                                    <span class="closeDesc">
+                                          <i class="fa fa-times"></i> Close
+                                    </span>
+                              </a>
+                              Pork Pepperoni, Capsicum
+                        </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="clearfix foodbox center-block">
+                        <div class="pricesection">
+                              <div class="responsive fifty">
+                                    <span class="h3">
+                                          Rs. 300
+                                    </span>
+                              </div>
+                              <div class="responsive fifty">
+                                    <span class="vegNonvegIcon pull-right">
+                                          <img src="images/v.png" class="img-responsive" alt="Image" width="24">
+                                    </span>
+                              </div>
+                        </div>
+                        <div class="availOption">
+                              <span class="fillingFast">
+                                    Limited Item
+                              </span>
+                        </div>
+                        <div class="thumbnail">
+                              <img src="images/3.jpg" alt="">
+                              <div class="caption">
+                                    <div class="contentInline clearfix">
+                                          <div class="responsive contentPart">
+                                                <div class="clearfix">
+                                                      <h3 class="pull-left">Veg Supreme</h3>
+                                                </div>
+                                                <p class="foodDesc">
+                                                      <a href="javascript:void(0)" onclick="showMoreDesc('moreDesc3')">Description</a>
+                                                </p>
+                                          </div>
+                                          <div class="responsive cartPart">
+                                                <div class="clearfix pull-right">
+                                                      <a href="javascript:void(0)" class="btn btn-sm btn-primary addRemoveButton addButton addButton">+</a>
+                                                      <span>
+                                                            &nbsp;1&nbsp;
+                                                      </span>
+                                                      <a href="#" class="btn btn-sm btn-default addRemoveButton removeButton">-</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="foodMoreDesc" id="moreDesc3">
+                              <a href="javascript:void(0)" onclick="showMoreDesc('moreDesc3')">
+                                    <span class="closeDesc">
+                                          <i class="fa fa-times"></i> Close
+                                    </span>
+                              </a>
+                              Paneer, Jalapenos, Capsicum, Onions loaded with Extra Cheese
+                        </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="clearfix foodbox center-block">
+                        <div class="pricesection">
+                              <div class="responsive fifty">
+                                    <span class="h3">
+                                          Rs. 300
+                                    </span>
+                              </div>
+                              <div class="responsive fifty">
+                                    <span class="vegNonvegIcon pull-right">
+                                          <img src="images/nv.png" class="img-responsive" alt="Image" width="24">
+                                    </span>
+                              </div>
+                        </div>
+                        <div class="availOption">
+                              <span class="itsAvaliable">
+                                    Avaliable
+                              </span>
+                        </div>
+                        <div class="thumbnail">
+                              <img src="images/4.jpg" alt="">
+                              <div class="caption">
+                                    <div class="contentInline clearfix">
+                                          <div class="responsive contentPart">
+                                                <div class="clearfix">
+                                                      <h3 class="pull-left">Chicken Overload</h3>
+                                                </div>
+                                                <p class="foodDesc">
+                                                      <a href="javascript:void(0)" onclick="showMoreDesc('moreDesc4')">Description</a>
+                                                </p>
+                                          </div>
+                                          <div class="responsive cartPart">
+                                                <div class="clearfix pull-right">
+                                                      <a href="#" class="btn btn-sm btn-primary addRemoveButton addButton addButton">+</a>
+                                                      <span>
+                                                            &nbsp;5&nbsp;
+                                                      </span>
+                                                      <a href="#" class="btn btn-sm btn-default addRemoveButton removeButton">-</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="foodMoreDesc" id="moreDesc4">
+                              <a href="javascript:void(0)" onclick="showMoreDesc('moreDesc4')">
+                                    <span class="closeDesc">
+                                          <i class="fa fa-times"></i> Close
+                                    </span>
+                              </a>
+                        Barbeque Chicken, Pepperoni, Spicy Chicken
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div class="row">
+            <div class="col-md-12">
+                  <p class="text-center">Copyright © MindStormers</p>
+            </div>
+      </div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
