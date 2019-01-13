@@ -6,6 +6,10 @@
           background-color: #49071c;
         }
 
+        .top {
+          margin-top: 7px;
+        }
+
         footer.page-footer {
           background-color: #49071c;
           margin-top: 2rem;

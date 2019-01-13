@@ -12,12 +12,20 @@
 		  margin-top: 10px
 	}
 
+	.bottom{
+		  margin-bottom: 10px
+	}
+
 	.left{
-  		   float:left;
+  		   float: left;
+	}
+
+	.right{
+		   float: right;
 	}
 
 	.clear{
-  		   clear:both;
+  		   clear: both;
 	}
 
 	.div-button
@@ -50,6 +58,13 @@
 	}
 
 	header > * { text-align: right; }
+
+	footer {
+		background: #7523AA;
+		width: 100%;
+	}
+
+	footer > * { text-align: center; }
 
 	body { 
 		background-image: url("pizza.jpg");
@@ -124,6 +139,9 @@
 <header>
 
 	<nav>
+		<div class="left div-button top">
+			<!--img src="css/logo.jpg" height="45" width="45"-->
+		</div>
 		<div>
 		<ul>
 		    <form>
@@ -134,7 +152,7 @@
 					<input type="password" name="password" placeholder="Password">		
 				</div>
 				<div class="left div-button">
-					<button class="button">Login</button>
+					<button class="button" formaction="list/index.html">Login</button></a>
 				</div>
 		    </form>
 		</ul>
@@ -149,11 +167,18 @@
 		<input type="text" name="name" placeholder="Name">
 		</div>
 		<div class="left div-button div-top">
-		<input type="number" name="age" placeholder="Age">
+		<input type="number" name="phone" placeholder="Phone No.">
 		</div>
 		<p></p>
 		<div class="left div-button div-top">		
 		<textarea rows="2" cols="50" name="comment" placeholder="Address"></textarea>
+		</div>
+		<p></p>
+		<div class="left div-button div-top">
+		<input type="text" name="email" placeholder="Email">
+		</div>
+		<div class="left div-button div-top">
+		<input type="date" name="Birth" placeholder="Date of Birth">
 		</div>
 		<p></p>
 		<div class="left div-button div-top">
@@ -164,10 +189,18 @@
 		</div>
 		<p></p>
 		<div class="left div-button div-top">
-			<button class="button">SignUp</button>
+			<button class="button" value="submit" formaction="list/index.html">SignUp</button>
 		</div>
 	</form>
 	</div>
-</div>
+
+</div> 
+
+<!--footer class="page-footer center-on-small-only nopadding top bottom">
+	<div class="col-md-13">
+        <p class="text-center">Copyright © MindStormers</p>
+     </div>
+</footer-->
+
 </body>
 </html>
