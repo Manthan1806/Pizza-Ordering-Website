@@ -1,9 +1,17 @@
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+
 <html>
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css'>
   	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css'>
   	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
 </head>
 
 <title>Register</title>
@@ -13,7 +21,7 @@
 	}
 
 	.bottom{
-		  margin-bottom: 10px
+		  margin-bottom: 20px
 	}
 
 	.left{
@@ -93,7 +101,7 @@
 	  background: url("white.png");
 	  background-repeat: no-repeat;
 	  background-position: right;
-	  background-size: 500px 100%;
+	  background-size: 45% 100%;
 	  opacity:0.9;
 	  text-align: right;
 	  margin-right: 20px;
@@ -134,6 +142,9 @@
 
 <body>
 
+<sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
+         url = "jdbc:mysql://localhost:t3261db"
+         user = "t3261"  password = "t3261"/>
 
 <div class="full-bg-img pattern-6">
 <header>
@@ -144,16 +155,16 @@
 		</div>
 		<div>
 		<ul>
-		    <form>
+		    <form method="post">
 		    	<div class="left top">
 					<input type="text" name="email" placeholder="Email">
 		    	</div>
 		    	<div class="left div-button top">
 					<input type="password" name="password" placeholder="Password">		
-				</div>
-				<div class="left div-button">
-					<button class="button" formaction="list/index.html">Login</button></a>
-				</div>
+			</div>
+			<div class="left div-button">
+				<button class="button" formaction="loginprocess.jsp">Login</button></a>
+			</div>
 		    </form>
 		</ul>
 		</div>
@@ -162,37 +173,72 @@
 </header>
 
 	<div id="form">
-	<form>
-		<div class="left div-button div-top">		
-		<input type="text" name="name" placeholder="Name">
-		</div>
-		<div class="left div-button div-top">
-		<input type="number" name="phone" placeholder="Phone No.">
-		</div>
-		<p></p>
-		<div class="left div-button div-top">		
-		<textarea rows="2" cols="50" name="comment" placeholder="Address"></textarea>
-		</div>
-		<p></p>
-		<div class="left div-button div-top">
-		<input type="text" name="email" placeholder="Email">
-		</div>
-		<div class="left div-button div-top">
-		<input type="date" name="Birth" placeholder="Date of Birth">
-		</div>
-		<p></p>
-		<div class="left div-button div-top">
-		<input type="password" name="password" placeholder="Password">
-		</div>
-		<div class="left div-button div-top"> 
-		<input type="password" name="confirm_password" placeholder="Confirm Password">
-		</div>
-		<p></p>
-		<div class="left div-button div-top">
-			<button class="button" value="submit" formaction="list/index.html">SignUp</button>
-		</div>
-	</form>
+		<form method="post">
+			<div class="left div-button div-top">		
+				<input id="name" type="text" name="name" placeholder="Name">
+			</div>
+			<div class="left div-button div-top">
+				<input id="phone" type="number" name="phone" placeholder="Phone No.">
+			</div>
+			<p></p>
+			<div class="left div-button div-top">		
+				<textarea id="addr" rows="2" cols="50" name="address" placeholder="Address"></textarea>
+			</div>
+			<p></p>
+			<div class="left div-button div-top">
+				<input id="email" type="text" name="email" placeholder="Email">
+			</div>
+			<div class="left div-button div-top">
+				<input id="date" type="date" name="Birth" placeholder="Date of Birth">
+			</div>
+			<p></p>
+			<div class="left bottom div-button div-top">
+				<input id="pwd" type="password" name="password" placeholder="Password">
+			</div>
+			<div class="top div-button div-top"> 
+				<input id="cpwd" type="password" name="confirm_password" placeholder="Confirm Password">
+			</div>
+			<p></p>
+			<div class="left div-button div-top">
+				<button class="button" onclick="return match()" formaction="register.jsp">SignUp</button>
+			</div>
+		</form>
 	</div>
+
+<script>
+function match()
+{
+	var name = document.getElementById("name").value;
+	var phone = document.getElementById("phone").value;
+	var addr = document.getElementById("addr").value;
+	var email = document.getElementById("email").value;
+	var date = document.getElementById("date").value;
+	var pwd = document.getElementById("pwd").value;
+	var cpwd = document.getElementById("cpwd").value;
+	
+	if(name == "" || phone == "" || addr == "" || email == "" || date == "" || pwd == "" || cpwd == "")
+	{
+		alert("Enter all input fields!!");
+		return false;
+	}
+
+	if(phone.length < 10)
+	{
+		alert("Phone number should be at least 10 digit long");
+		return false;
+	}
+
+	if (pwd === cpwd) 
+	{
+		//window.open("register.jsp?name="+name);	
+	} 
+	else
+    {
+		alert("Passwords don't match");
+		return false;
+	} 
+}
+</script>
 
 </div> 
 
